@@ -30,7 +30,7 @@ plt.show()
 
 ### Results 
 
-[Visualization of Top Skills for Data Nerds](Project/images/skill_demand_Canada.png)
+![Visualization of Top Skills for Data Nerds](Project/images/skill_demand_Canada.png)
 
 ### Insights
 
@@ -64,3 +64,53 @@ SQL and Python: Universally critical across all roles, indicating a fundamental 
 Cloud Technologies (AWS and Azure): Increasingly important, especially for Data Engineers and Senior Data Engineers, reflecting the industry's shift towards cloud computing.
 Big Data Tools (Spark): Significant for handling and processing large-scale data, particularly for engineering roles.
 Visualization Tools (Tableau and Power BI): Important for Data Analysts to transform data into actionable insights through visualizations.
+
+## 2. How are in-demand skills trending for Data Analysts in Canada?
+
+
+View my notebook with detailed steps here: [3_skills_trend](Project/3_skills_trend.ipynb)
+
+
+df_plot = df_DA_CAN_perc.iloc[:, :5]
+
+from matplotlib.ticker import PercentFormatter
+
+sns.lineplot(data=df_plot, dashes=False, palette='tab10')
+sns.set_theme(style='ticks')
+sns.despine()
+
+plt.title('Trending Top Skills for Data Analysts in the Canada')
+plt.ylabel('Skill Likelihood in job Posting')
+plt.xlabel('')
+
+ax= plt.gca()
+ax.yaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+plt.show()
+
+### Results 
+
+![Trending Top skills for Data Analysts](Project/images/Trending_skills.png)
+
+### Insights
+
+SQL: SQL shows consistent demand throughout the year with peaks in April and September, highlighting its essential role in database management and querying.
+
+Python: The demand for Python fluctuates, peaking in May and July, demonstrating its versatility in data analysis, machine learning, and automation.
+
+Excel: Excel exhibits variable demand with a significant peak in June, emphasizing its importance for quick, ad-hoc analysis.
+
+Tableau: The demand for Tableau dips in May and July but stabilizes later, indicating its critical role in data visualization and business intelligence.
+
+Power BI: Power BI demand fluctuates, peaking in September, showing its growing importance in interactive data visualization and business intelligence.
+
+Recommendations for Job Enthusiasts
+Master SQL: Prioritize mastering SQL through courses, certifications, and practical practice with datasets. SQL is fundamental for database management and querying.
+
+Enhance Python Skills: Focus on Python by taking advanced courses and using data analysis libraries such as pandas and NumPy. Participate in Kaggle projects to apply your skills in real-world scenarios.
+
+Stay Proficient in Excel: Maintain proficiency in Excel by learning advanced features like pivot tables and VLOOKUP, and obtaining certifications. Excel remains crucial for quick, comprehensive data analysis.
+
+Develop Expertise in Tableau: Gain expertise in Tableau by enrolling in courses, practicing with sample datasets, and getting certified. Tableau is essential for creating insightful and interactive dashboards.
+
+Learn Power BI: Learn Power BI through training courses, building interactive dashboards, and obtaining certifications. Power BI is increasingly popular for business intelligence tasks.
